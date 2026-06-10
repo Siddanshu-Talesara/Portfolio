@@ -369,6 +369,7 @@ header {
 .voxel-thumb { background: linear-gradient(135deg, #00eaff, #595cff); }
 .fruity-thumb { background: linear-gradient(135deg, #ff9f1c, #2ec4b6); }
 .wall-thumb { background: linear-gradient(135deg, #ef476f, #3a0ca3); }
+.ludo-thumb { background: linear-gradient(135deg, #f77f00, #6a040f); }
 .rummy-thumb { background: linear-gradient(135deg, #06d6a0, #073b4c); }
 .dress-thumb { background: linear-gradient(135deg, #f72585, #7209b7); }
 
@@ -392,6 +393,7 @@ header {
   font-size: 12px;
 }
 .badge.live { background: #06d6a0; }
+.badge.practice { background: #fcbf49; }
 .badge.progress { background: #ffd166; }
 .project-btn {
   display: inline-flex;
