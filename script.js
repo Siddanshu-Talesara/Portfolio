@@ -1,4 +1,3 @@
-// Mobile Menu
 const menuIcon = document.getElementById("menuIcon");
 const navLinks = document.getElementById("navLinks");
 
@@ -12,14 +11,14 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   });
 });
 
-// Typing Animation
+// Typing animation
 const typingText = document.getElementById("typingText");
 
 const words = [
-  "Unity Game Developer",
-  "Roblox Developer",
-  "AR/VR Developer",
-  "Full Stack .NET Engineer"
+  "gameplay systems.",
+  "multiplayer experiences.",
+  "Mixed Reality projects.",
+  "interactive Unity experiences."
 ];
 
 let wordIndex = 0;
@@ -30,14 +29,14 @@ function typeEffect() {
   const currentWord = words[wordIndex];
 
   if (isDeleting) {
-    typingText.textContent = currentWord.substring(0, charIndex - 1);
     charIndex--;
   } else {
-    typingText.textContent = currentWord.substring(0, charIndex + 1);
     charIndex++;
   }
 
-  let speed = isDeleting ? 70 : 115;
+  typingText.textContent = currentWord.substring(0, charIndex);
+
+  let speed = isDeleting ? 45 : 80;
 
   if (!isDeleting && charIndex === currentWord.length) {
     speed = 1400;
@@ -45,38 +44,57 @@ function typeEffect() {
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     wordIndex = (wordIndex + 1) % words.length;
-    speed = 350;
+    speed = 250;
   }
 
-  setTimeout(typeEffect, speed);
+  window.setTimeout(typeEffect, speed);
 }
 
 typeEffect();
 
-// Scroll Reveal Animation
+// Reveal on scroll
 const revealElements = document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
 
-  revealElements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const revealPoint = 110;
+revealElements.forEach((element) => revealObserver.observe(element));
 
-    if (elementTop < windowHeight - revealPoint) {
-      element.classList.add("active");
-    }
+// Project filters
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+
+    projectCards.forEach((card) => {
+      const shouldShow =
+        filter === "all" || card.dataset.category === filter;
+
+      card.classList.toggle("hidden", !shouldShow);
+    });
   });
-}
+});
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+// Profile image fallback.
+// Put your image at: assets/profile.jpg
+const profilePhoto = document.getElementById("profilePhoto");
+const photoFallback = document.getElementById("photoFallback");
 
-// Contact Form Demo
-const form = document.querySelector("form");
-
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  alert("Thank you! Your message has been submitted. Please connect through email or phone for quick response.");
-  form.reset();
+profilePhoto.addEventListener("error", () => {
+  profilePhoto.style.display = "none";
+  photoFallback.style.display = "grid";
 });
