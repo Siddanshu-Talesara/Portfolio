@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Siddanshu Talesara - Unity Game Developer portfolio featuring multiplayer, mixed reality, Skillz, AR, Roblox and interactive Unity projects." />
+  <meta name="description" content="Siddanshu Talesara - Unity Game Developer portfolio featuring multiplayer, mixed reality, Skillz, AR, Kinect and interactive Unity projects." />
   <title>Siddanshu Talesara | Unity Game Developer</title>
-
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
-
 <body>
-  <header class="site-header">
+
+  <div class="site-bg" aria-hidden="true">
+    <div class="grid-bg"></div>
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <header>
     <nav class="navbar">
       <a href="#home" class="logo">Siddanshu<span>.</span></a>
 
@@ -26,7 +31,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <button class="menu-icon" id="menuIcon" aria-label="Open navigation menu">
+      <button class="menu-icon" id="menuIcon" aria-label="Open menu">
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
@@ -34,414 +39,400 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-content">
-        <div class="eyebrow"><span></span> UNITY GAME DEVELOPER</div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> UNITY GAME DEVELOPER</p>
 
-        <h1>Siddanshu<br />Talesara</h1>
+        <h1>Building games.<br><em>Creating interaction.</em></h1>
 
-        <h2>I build <span id="typingText"></span><span class="typing-cursor">|</span></h2>
+        <h2><span id="typingText"></span><span class="cursor">|</span></h2>
 
         <p class="hero-description">
-          I develop gameplay systems, multiplayer experiences, Mixed Reality applications,
-          mobile games and real-time Unity interactions. My work ranges from LAN multiplayer
-          gameplay and AR/MR experiences to Skillz tournament games, Roblox projects and
-          physical-world interactive installations.
+          Unity Game Developer focused on gameplay systems, LAN multiplayer, Mixed Reality,
+          mobile games and real-time interactive experiences. I enjoy turning ideas into
+          responsive gameplay, reusable systems and polished player interactions.
         </p>
 
-        <div class="hero-buttons">
+        <div class="hero-actions">
           <a href="#projects" class="btn primary-btn">
-            <i class="fa-solid fa-gamepad"></i> Explore My Work
+            <i class="fa-solid fa-gamepad"></i> Explore Projects
           </a>
-          <a href="mailto:siddanshutalesara439@gmail.com" class="btn secondary-btn">
-            <i class="fa-regular fa-envelope"></i> Contact Me
+          <a href="mailto:siddanshutalesara439@gmail.com" class="btn ghost-btn">
+            <i class="fa-solid fa-envelope"></i> Contact Me
           </a>
         </div>
 
-        <div class="hero-meta">
-          <span><i class="fa-solid fa-location-dot"></i> Bhilwara, Rajasthan</span>
-          <span><i class="fa-solid fa-briefcase"></i> Unity • C# • AR/MR • Multiplayer</span>
+        <div class="tech-row">
+          <span>Unity</span>
+          <span>C#</span>
+          <span>Multiplayer</span>
+          <span>AR / MR</span>
+          <span>Roblox</span>
+          <span>Skillz</span>
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="photo-frame">
-          <img
-            src="assets/profile.jpg"
-            alt="Siddanshu Talesara"
-            class="profile-photo"
-            id="profilePhoto"
-          />
-          <div class="photo-fallback" id="photoFallback" aria-hidden="true">ST</div>
+      <div class="hero-showcase">
+        <div class="profile-card glass">
+          <div class="photo-box">
+            <img src="assets/profile.jpg" alt="Siddanshu Talesara" id="profilePhoto">
+            <div class="photo-fallback" id="photoFallback">ST</div>
+          </div>
 
-          <div class="photo-caption">
-            <strong>Gameplay. Interaction. Experience.</strong>
-            <span>Unity Developer</span>
+          <div class="profile-bottom">
+            <div>
+              <span class="small-label">CURRENT FOCUS</span>
+              <h3>Gameplay & Interactive Systems</h3>
+            </div>
+
+            <div class="mini-stats">
+              <div><strong>Unity</strong><span>2D/3D</span></div>
+              <div><strong>AR/MR</strong><span>Spatial</span></div>
+              <div><strong>LAN</strong><span>Multiplayer</span></div>
+            </div>
           </div>
         </div>
 
-        <div class="floating-chip chip-one"><i class="fa-brands fa-unity"></i> Unity</div>
-        <div class="floating-chip chip-two"><i class="fa-solid fa-cubes"></i> Mixed Reality</div>
-        <div class="floating-chip chip-three"><i class="fa-solid fa-users"></i> Multiplayer</div>
+        <div class="float-tag tag-unity"><i class="fa-brands fa-unity"></i> Unity</div>
+        <div class="float-tag tag-mr"><i class="fa-solid fa-cubes"></i> Mixed Reality</div>
+        <div class="float-tag tag-net"><i class="fa-solid fa-network-wired"></i> Multiplayer</div>
       </div>
     </section>
 
     <section class="section reveal" id="about">
-      <div class="section-heading">
-        <p class="section-kicker">ABOUT ME</p>
-        <h2>Developer focused on gameplay and interaction.</h2>
+      <div class="section-head split">
+        <div>
+          <p class="section-kicker">ABOUT ME</p>
+          <h2>Gameplay-first developer with a broad technical range.</h2>
+        </div>
+        <p>
+          My projects include professional mobile games, Kinect interaction, Mixed Reality,
+          LAN multiplayer, Skillz tournament gameplay, Roblox and physical interactive installations.
+        </p>
       </div>
 
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>
-            I am a Unity Game Developer with experience building 2D/3D games,
-            hyper-casual games, LAN multiplayer gameplay, Mixed Reality applications,
-            puzzle systems, Kinect-controlled experiences and competitive mobile games.
-          </p>
+      <div class="about-bento">
+        <article class="info-module large">
+          <span class="module-number">01</span>
+          <div>
+            <h3>Gameplay Engineering</h3>
+            <p>
+              Player controllers, game states, physics, collision systems, objectives,
+              scoring, progression, UI flow and reusable gameplay architecture.
+            </p>
+          </div>
+        </article>
 
-          <p>
-            I enjoy solving gameplay problems, designing reusable systems and connecting
-            Unity with real-time input. I work mainly with Unity and C#, while also having
-            experience with Roblox/Luau, ARCore, Skillz, WebGL, Android, iOS and .NET.
-          </p>
-        </div>
+        <article class="info-module">
+          <span class="module-number">02</span>
+          <div>
+            <h3>Real-Time Interaction</h3>
+            <p>UDP communication, coordinate mapping, runtime tracking and event-driven visual systems.</p>
+          </div>
+        </article>
 
-        <div class="about-stats">
-          <div class="stat">
-            <strong>Unity</strong>
-            <span>Gameplay & Interactive Systems</span>
+        <article class="info-module">
+          <span class="module-number">03</span>
+          <div>
+            <h3>Production Development</h3>
+            <p>Debugging, optimization, mobile builds, maintainable architecture and platform integration.</p>
           </div>
-          <div class="stat">
-            <strong>AR / MR</strong>
-            <span>Real-world + Virtual Interaction</span>
-          </div>
-          <div class="stat">
-            <strong>Multiplayer</strong>
-            <span>LAN & Roblox Experiences</span>
-          </div>
-          <div class="stat">
-            <strong>Mobile</strong>
-            <span>Android • iOS • Skillz</span>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <section class="section reveal" id="skills">
-      <div class="section-heading">
+      <div class="section-head">
         <p class="section-kicker">TECHNICAL STACK</p>
-        <h2>What I work with.</h2>
+        <h2>Tools I use to build experiences.</h2>
       </div>
 
       <div class="skills-grid">
         <article class="skill-card">
           <i class="fa-brands fa-unity"></i>
-          <h3>Unity & C#</h3>
-          <p>2D/3D gameplay, physics, player controllers, game states, UI and reusable systems.</p>
+          <div><h3>Unity & C#</h3><p>2D/3D gameplay, physics, game states, UI and reusable systems.</p></div>
         </article>
 
         <article class="skill-card">
           <i class="fa-solid fa-users"></i>
-          <h3>Multiplayer</h3>
-          <p>LAN gameplay, player spawning, match flow, state handling and Roblox multiplayer logic.</p>
+          <div><h3>Multiplayer</h3><p>LAN gameplay, player spawning, match flow and synchronized state.</p></div>
         </article>
 
         <article class="skill-card">
           <i class="fa-solid fa-cubes"></i>
-          <h3>AR / Mixed Reality</h3>
-          <p>ARCore, surface detection, virtual object placement, manipulation and spatial interaction.</p>
+          <div><h3>AR / Mixed Reality</h3><p>Surface detection, spatial placement and 3D object interaction.</p></div>
         </article>
 
         <article class="skill-card">
           <i class="fa-solid fa-satellite-dish"></i>
-          <h3>Real-Time Integration</h3>
-          <p>UDP communication, port listening, coordinate mapping, runtime tracking and event-driven effects.</p>
+          <div><h3>Real-Time Integration</h3><p>UDP communication, coordinates, runtime objects and live events.</p></div>
         </article>
 
         <article class="skill-card">
           <i class="fa-solid fa-wand-magic-sparkles"></i>
-          <h3>Visual Systems</h3>
-          <p>Particles, trails, URP materials, HLSL shader concepts, animation and audio feedback.</p>
+          <div><h3>Visual Systems</h3><p>Particles, trails, URP materials, HLSL concepts and audio feedback.</p></div>
         </article>
 
         <article class="skill-card">
           <i class="fa-solid fa-code"></i>
-          <h3>.NET & Backend</h3>
-          <p>ASP.NET MVC, .NET Core, REST APIs, Entity Framework and MS SQL Server.</p>
+          <div><h3>.NET & Backend</h3><p>ASP.NET MVC, .NET Core, REST APIs, Entity Framework and SQL.</p></div>
         </article>
       </div>
     </section>
 
     <section class="section reveal" id="experience">
-      <div class="section-heading">
+      <div class="section-head">
         <p class="section-kicker">EXPERIENCE</p>
         <h2>Professional journey.</h2>
       </div>
 
-      <div class="timeline">
-        <article class="timeline-item">
-          <span class="timeline-date">Nov 2025 – Present</span>
-          <h3>Game Developer — Unity & Roblox</h3>
-          <h4>Apex Dream Studio • Remote</h4>
-          <p>
-            Develop Unity and Roblox projects across gameplay systems, Mixed Reality,
-            mobile games, real-time interactive effects, debugging and performance optimization.
-            Worked on VOXELAr, Interactive Bowling, Gin Rummy Club and AR Dress Up.
-          </p>
+      <div class="experience-stack">
+        <article class="experience-card current">
+          <div class="experience-date">Nov 2025 – Present</div>
+          <div class="experience-body">
+            <div class="experience-title">
+              <div>
+                <h3>Game Developer — Unity & Roblox</h3>
+                <h4>Apex Dream Studio • Remote</h4>
+              </div>
+              <span class="live-pill">CURRENT</span>
+            </div>
+            <p>
+              Developing Unity and Roblox projects across gameplay systems, Mixed Reality,
+              professional mobile games, interactive installations, debugging and optimization.
+            </p>
+          </div>
         </article>
 
-        <article class="timeline-item">
-          <span class="timeline-date">Aug 2023 – Mar 2024</span>
-          <h3>Game Developer Intern</h3>
-          <h4>3Men Studio • Ahmedabad</h4>
-          <p>
-            Implemented gameplay mechanics, player controls, object interactions and UI systems
-            in Unity/C#, while supporting architecture, testing and optimization.
-          </p>
+        <article class="experience-card">
+          <div class="experience-date">Aug 2023 – Mar 2024</div>
+          <div class="experience-body">
+            <h3>Game Developer Intern</h3>
+            <h4>3Men Studio • Ahmedabad</h4>
+            <p>Implemented gameplay mechanics, player controls, interactions, UI and reusable Unity systems.</p>
+          </div>
         </article>
 
-        <article class="timeline-item">
-          <span class="timeline-date">Apr 2023 – Jul 2023</span>
-          <h3>Software Developer — .NET</h3>
-          <h4>Workart • Bhilwara</h4>
-          <p>
-            Built ASP.NET/C# applications and SQL-backed functionality. Optimized queries
-            and backend logic to improve application performance.
-          </p>
+        <article class="experience-card">
+          <div class="experience-date">Apr 2023 – Jul 2023</div>
+          <div class="experience-body">
+            <h3>Software Developer — .NET</h3>
+            <h4>Workart • Bhilwara</h4>
+            <p>Built ASP.NET/C# functionality and optimized SQL/database-backed application workflows.</p>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section reveal" id="projects">
-      <div class="section-heading projects-heading">
+      <div class="section-head project-head">
         <div>
           <p class="section-kicker">SELECTED WORK</p>
           <h2>Projects that show how I build.</h2>
         </div>
 
-        <div class="project-filters" aria-label="Project filters">
+        <div class="filters">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="professional">Professional</button>
           <button class="filter-btn" data-filter="personal">Personal</button>
         </div>
       </div>
 
-      <div class="projects-grid">
-        <article class="project-card featured-project" data-category="professional">
-          <div class="project-number">01</div>
-          <div class="project-tags">
-            <span>Mixed Reality</span><span>Unity</span><span>ARCore</span>
-          </div>
-          <h3>VOXELAr</h3>
-          <p>
-            A Mixed Reality voxel-building experience where users detect real-world surfaces,
-            place virtual voxel blocks into their environment, build structures and manipulate
-            objects through move, rotate, scale, customize and delete interactions.
-          </p>
-          <ul>
-            <li>Surface detection and real-world object placement</li>
-            <li>Interactive voxel construction and editing</li>
-            <li>Mobile-friendly 3D object manipulation</li>
-          </ul>
-          <a href="https://drive.google.com/file/d/1f23H3J3b3igznItSeJOfQNVsYryMorV5/view?usp=drive_link" target="_blank" rel="noopener" class="project-link">
-            Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </article>
+      <div class="projects-bento">
 
-        <article class="project-card" data-category="personal">
-          <div class="project-number">02</div>
-          <div class="project-tags">
-            <span>LAN Multiplayer</span><span>Unity</span><span>C#</span>
+        <article class="project-card project-featured" data-category="professional">
+          <div class="project-art voxel-art">
+            <i class="fa-solid fa-cubes"></i>
+            <span class="art-label">MIXED REALITY</span>
           </div>
-          <h3>Capture the Flag</h3>
-          <p>
-            A LAN multiplayer competitive game with team-based objective gameplay,
-            networked player spawning, flag pickup/carry/return logic, scoring,
-            respawn flow and complete match-state management.
-          </p>
-          <ul>
-            <li>LAN multiplayer player management</li>
-            <li>Flag ownership, capture and scoring systems</li>
-            <li>Match lifecycle and synchronized gameplay state</li>
-          </ul>
-          <a href="https://drive.google.com/file/d/1i6t7ZEmsqEPaw3LO_qmC46OcObcABt2P/view?usp=drive_link" target="_blank" rel="noopener" class="project-link">
-            Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </article>
-
-        <article class="project-card" data-category="personal">
-          <div class="project-number">03</div>
-          <div class="project-tags">
-            <span>Puzzle</span><span>Grid Logic</span><span>Unity</span>
+          <div class="project-content">
+            <div class="project-tags"><span>Professional</span><span>Unity</span><span>ARCore</span></div>
+            <h3>VOXELAr</h3>
+            <p>
+              Mixed Reality voxel-building experience where users detect real-world surfaces,
+              place virtual blocks into their environment, construct voxel structures and manipulate
+              objects using move, rotate, scale, customize and delete interactions.
+            </p>
+            <ul>
+              <li>Real-world surface detection</li>
+              <li>Voxel construction and editing</li>
+              <li>Spatial 3D manipulation</li>
+            </ul>
+            <a href="https://drive.google.com/file/d/1f23H3J3b3igznItSeJOfQNVsYryMorV5/view?usp=drive_link" target="_blank" class="project-link">
+              Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
-          <h3>Sokoban</h3>
-          <p>
-            A grid-based box-pushing puzzle game focused on deterministic movement,
-            push validation, wall constraints, target detection and reusable level logic.
-          </p>
-          <ul>
-            <li>Grid movement and box-push validation</li>
-            <li>Goal detection and puzzle completion</li>
-            <li>Restart and level progression systems</li>
-          </ul>
-          <a href="https://drive.google.com/file/d/1LW15Hpci3NUnyEUp8m8qOfAbV5quywlW/view?usp=drive_link" target="_blank" rel="noopener" class="project-link">
-            Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
         </article>
 
         <article class="project-card" data-category="professional">
-          <div class="project-number">04</div>
-          <div class="project-tags">
-            <span>Skillz</span><span>Mobile</span><span>Unity</span>
+          <div class="project-art fruity-art">
+            <i class="fa-solid fa-person-running"></i>
+            <span class="art-label">KINECT GAME</span>
           </div>
-          <h3>Dropping Ball</h3>
-          <p>
-            A skill-based competitive arcade game integrated with the Skillz platform.
-            Players rely on timing and accuracy while navigating breakable and dangerous
-            sections and competing for tournament scores.
-          </p>
-          <ul>
-            <li>Competitive gameplay and score systems</li>
-            <li>Skillz tournament lifecycle integration</li>
-            <li>Android and iOS platform integration</li>
-          </ul>
-          <a href="https://drive.google.com/file/d/1KOb9QEu2NuwMNuRHtmt6YOma4oyZvvL1/view?usp=drive_link" target="_blank" rel="noopener" class="project-link">
-            Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+          <div class="project-content">
+            <div class="project-tags"><span>Professional</span><span>Kinect</span><span>Unity</span></div>
+            <h3>FruityNinza</h3>
+            <p>
+              Professional Kinect motion-controlled arcade game where physical hand/body
+              movement is converted into real-time fruit slicing inside Unity.
+            </p>
+            <a href="https://drive.google.com/file/d/1G7JBMQSdJ0bhtq_05dIejKoqrbO8m0ng/view?usp=drive_link" target="_blank" class="project-link">
+              Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
         </article>
 
         <article class="project-card" data-category="professional">
-          <div class="project-number">05</div>
-          <div class="project-tags">
-            <span>Real-Time Data</span><span>UDP</span><span>Unity VFX</span>
+          <div class="project-art wall-art">
+            <i class="fa-solid fa-burst"></i>
+            <span class="art-label">HYPER CASUAL</span>
           </div>
-          <h3>Interactive Bowling Lane Effects</h3>
-          <p>
-            Developed the Unity-side visual interaction layer for a physical bowling installation.
-            Unity receives lane, ball and coordinate data from an external tracking executable
-            and uses it to drive projected visual effects across two lanes.
-          </p>
-          <ul>
-            <li>UDP data communication and coordinate mapping</li>
-            <li>Runtime ball/player handling for two lanes</li>
-            <li>Interactive effects across a three-projector display</li>
-          </ul>
-          <span class="project-link muted-link">
-            Professional Project <i class="fa-solid fa-building"></i>
-          </span>
+          <div class="project-content">
+            <div class="project-tags"><span>Professional</span><span>Mobile</span><span>Physics</span></div>
+            <h3>Wall Breaker</h3>
+            <p>
+              Professional hyper-casual mobile game with simple controls, physics-based wall
+              destruction, satisfying impact feedback and fast level progression.
+            </p>
+            <a href="https://drive.google.com/file/d/18a6AMgr84HAkqIAvud3m6e-WrJlEwxxv/view?usp=drive_link" target="_blank" class="project-link">
+              Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
         </article>
 
         <article class="project-card" data-category="personal">
-          <div class="project-number">06</div>
-          <div class="project-tags">
-            <span>Hyper Casual</span><span>Physics</span><span>Mobile</span>
+          <div class="project-art capture-art">
+            <i class="fa-solid fa-flag"></i>
+            <span class="art-label">LAN MULTIPLAYER</span>
           </div>
-          <h3>Wall Breaker</h3>
-          <p>
-            A hyper-casual mobile game built around responsive controls, physics-based
-            wall destruction, satisfying collision feedback and progressive level difficulty.
-          </p>
-          <ul>
-            <li>Simple mobile controls and fast game loop</li>
-            <li>Physics-driven wall destruction</li>
-            <li>Score, progression and restart systems</li>
-          </ul>
-          <a href="https://drive.google.com/file/d/18a6AMgr84HAkqIAvud3m6e-WrJlEwxxv/view?usp=drive_link" target="_blank" rel="noopener" class="project-link">
-            Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+          <div class="project-content">
+            <div class="project-tags"><span>Personal</span><span>LAN</span><span>C#</span></div>
+            <h3>Capture the Flag</h3>
+            <p>
+              LAN multiplayer competitive game with team spawning, flag pickup/carry/return,
+              scoring, respawn and synchronized match-state logic.
+            </p>
+            <a href="https://drive.google.com/file/d/1i6t7ZEmsqEPaw3LO_qmC46OcObcABt2P/view?usp=drive_link" target="_blank" class="project-link">
+              Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
         </article>
 
         <article class="project-card" data-category="professional">
-          <div class="project-number">07</div>
-          <div class="project-tags">
-            <span>AR</span><span>Fashion</span><span>Completed</span>
+          <div class="project-art drop-art">
+            <i class="fa-solid fa-circle-down"></i>
+            <span class="art-label">SKILLZ TOURNAMENT</span>
           </div>
-          <h3>AR Dress Up</h3>
-          <p>
-            A completed AR fashion customization experience where users interact with
-            virtual clothing, textures and fashion elements through an interactive
-            customization and visualization flow.
-          </p>
-          <ul>
-            <li>Outfit and texture customization</li>
-            <li>AR visualization and interaction</li>
-            <li>Responsive customization feedback</li>
-          </ul>
-          <span class="project-link muted-link">
-            Completed • Video Coming Soon <i class="fa-solid fa-check"></i>
-          </span>
+          <div class="project-content">
+            <div class="project-tags"><span>Professional</span><span>Skillz</span><span>Mobile</span></div>
+            <h3>Dropping Ball</h3>
+            <p>
+              Skill-based competitive arcade game integrated with Skillz, focused on timing,
+              score optimization, mobile responsiveness and tournament gameplay.
+            </p>
+            <a href="https://drive.google.com/file/d/1KOb9QEu2NuwMNuRHtmt6YOma4oyZvvL1/view?usp=drive_link" target="_blank" class="project-link">
+              Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="personal">
+          <div class="project-art sokoban-art">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span class="art-label">PUZZLE</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tags"><span>Personal</span><span>Grid Logic</span><span>Unity</span></div>
+            <h3>Sokoban</h3>
+            <p>
+              Grid-based box-pushing puzzle with deterministic movement, push validation,
+              targets, restart handling and reusable level logic.
+            </p>
+            <a href="https://drive.google.com/file/d/1LW15Hpci3NUnyEUp8m8qOfAbV5quywlW/view?usp=drive_link" target="_blank" class="project-link">
+              Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card project-wide" data-category="professional">
+          <div class="project-art bowling-art">
+            <i class="fa-solid fa-bowling-ball"></i>
+            <span class="art-label">REAL-TIME INSTALLATION</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tags"><span>Professional</span><span>UDP</span><span>Interactive VFX</span></div>
+            <h3>Interactive Bowling Lane Effects</h3>
+            <p>
+              Unity-side visual interaction system for a physical bowling installation.
+              Unity receives lane, ball and coordinate data from an external tracking executable,
+              maps the live data into the scene and drives projected effects across two lanes.
+            </p>
+            <span class="project-link muted-link">Professional Installation</span>
+          </div>
         </article>
 
         <article class="project-card" data-category="professional">
-          <div class="project-number">08</div>
-          <div class="project-tags">
-            <span>Mobile</span><span>Card Game</span><span>Live</span>
+          <div class="project-art dress-art">
+            <i class="fa-solid fa-shirt"></i>
+            <span class="art-label">AR FASHION</span>
           </div>
-          <h3>Gin Rummy Club</h3>
-          <p>
-            Contributed to an existing professional multiplayer card game by improving
-            gameplay interactions, UI responsiveness, fixing issues and supporting mobile performance.
-          </p>
-          <ul>
-            <li>Gameplay interaction improvements</li>
-            <li>UI and responsiveness fixes</li>
-            <li>Production codebase experience</li>
-          </ul>
-          <a href="https://play.google.com/store/apps/details?id=com.apexdreamstudio.ginrummyclub" target="_blank" rel="noopener" class="project-link">
-            View on Play Store <i class="fa-brands fa-google-play"></i>
-          </a>
+          <div class="project-content">
+            <div class="project-tags"><span>Professional</span><span>AR</span><span>Completed</span></div>
+            <h3>AR Dress Up</h3>
+            <p>
+              Completed AR fashion customization experience with clothing/texture selection,
+              AR visualization and interactive customization feedback.
+            </p>
+            <span class="project-link muted-link">Completed • Video Coming Soon</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="professional">
+          <div class="project-art rummy-art">
+            <i class="fa-solid fa-layer-group"></i>
+            <span class="art-label">LIVE MOBILE GAME</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tags"><span>Professional</span><span>Card Game</span><span>Live</span></div>
+            <h3>Gin Rummy Club</h3>
+            <p>
+              Contributed to a professional multiplayer card game through gameplay interaction
+              improvements, UI fixes, bug resolution and mobile performance work.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.apexdreamstudio.ginrummyclub" target="_blank" class="project-link">
+              Play Store <i class="fa-brands fa-google-play"></i>
+            </a>
+          </div>
         </article>
 
         <article class="project-card" data-category="personal">
-          <div class="project-number">09</div>
-          <div class="project-tags">
-            <span>Kinect</span><span>Motion</span><span>Unity</span>
+          <div class="project-art ludo-art">
+            <i class="fa-solid fa-dice"></i>
+            <span class="art-label">BOARD GAME</span>
           </div>
-          <h3>FruityNinza</h3>
-          <p>
-            A Kinect-based motion-controlled arcade game where physical body and hand
-            movement is converted into fruit-slicing gameplay inside Unity.
-          </p>
-          <ul>
-            <li>Kinect motion input</li>
-            <li>Fruit spawning and slicing detection</li>
-            <li>Score, timer and game-over flow</li>
-          </ul>
-          <a href="https://drive.google.com/file/d/1G7JBMQSdJ0bhtq_05dIejKoqrbO8m0ng/view?usp=drive_link" target="_blank" rel="noopener" class="project-link">
-            Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
+          <div class="project-content">
+            <div class="project-tags"><span>Personal</span><span>Mobile</span><span>Computer Players</span></div>
+            <h3>Ludo</h3>
+            <p>
+              Turn-based Ludo project with dice logic, board paths, player-state management,
+              computer-controlled players and mobile UI.
+            </p>
+            <a href="https://drive.google.com/file/d/12k_mSgiOZlVJ87g0u2SF9sTj2mcOVqam/view?usp=drivesdk" target="_blank" class="project-link">
+              Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
         </article>
 
-        <article class="project-card" data-category="personal">
-          <div class="project-number">10</div>
-          <div class="project-tags">
-            <span>Board Game</span><span>Computer Players</span><span>Mobile</span>
-          </div>
-          <h3>Ludo</h3>
-          <p>
-            A self-developed mobile Ludo project with complete turn-based logic,
-            board-path management, computer-controlled players and practice monetization integration.
-          </p>
-          <ul>
-            <li>2–4 player game-state management</li>
-            <li>Computer-controlled opponents</li>
-            <li>Mobile UI and Google Ads practice</li>
-          </ul>
-          <a href="https://drive.google.com/file/d/12k_mSgiOZlVJ87g0u2SF9sTj2mcOVqam/view?usp=drivesdk" target="_blank" rel="noopener" class="project-link">
-            Watch Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </article>
       </div>
     </section>
 
     <section class="section reveal" id="education">
-      <div class="section-heading">
+      <div class="section-head">
         <p class="section-kicker">EDUCATION</p>
         <h2>Learning & foundation.</h2>
       </div>
 
-      <div class="education-grid">
-        <article class="edu-card">
+      <div class="education-bento">
+        <article class="edu-card large-edu">
           <span>2025 – 2027</span>
           <h3>MCA — AR/VR Specialization</h3>
           <p>Lovely Professional University</p>
@@ -462,37 +453,33 @@
     </section>
 
     <section class="section contact-section reveal" id="contact">
-      <div class="contact-card">
-        <p class="section-kicker">LET'S CONNECT</p>
-        <h2>Have a Unity, gameplay or interactive project in mind?</h2>
-        <p>
-          I am interested in opportunities involving Unity gameplay development,
-          multiplayer, AR/Mixed Reality and interactive systems.
-        </p>
-
-        <div class="contact-actions">
-          <a href="mailto:siddanshutalesara439@gmail.com" class="btn primary-btn">
-            <i class="fa-solid fa-envelope"></i> Email Me
-          </a>
-          <a href="https://www.linkedin.com/in/siddanshu-talesara-54b95927a/" target="_blank" rel="noopener" class="btn secondary-btn">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-          </a>
+      <div class="contact-card glass">
+        <div>
+          <p class="section-kicker">LET'S CONNECT</p>
+          <h2>Have a Unity or interactive project in mind?</h2>
         </div>
 
-        <div class="contact-details">
-          <span><i class="fa-solid fa-envelope"></i> siddanshutalesara439@gmail.com</span>
-          <span><i class="fa-solid fa-phone"></i> +91 9680613369</span>
-          <span><i class="fa-solid fa-location-dot"></i> Bhilwara, Rajasthan</span>
+        <div class="contact-copy">
+          <p>
+            I am interested in Unity gameplay, multiplayer, AR/Mixed Reality,
+            interactive installation and mobile game opportunities.
+          </p>
+
+          <div class="contact-actions">
+            <a href="mailto:siddanshutalesara439@gmail.com" class="btn primary-btn">
+              <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/siddanshu-talesara-54b95927a/" target="_blank" class="btn ghost-btn">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div>
-      <strong>Siddanshu Talesara</strong>
-      <span>Unity Game Developer</span>
-    </div>
+    <div><strong>Siddanshu Talesara</strong><span>Unity Game Developer</span></div>
     <p>© 2026 Siddanshu Talesara. All Rights Reserved.</p>
   </footer>
 
