@@ -791,3 +791,26 @@ footer strong { color: white; }
   .orb, .float-tag, .cursor { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+.contact-details {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-details a,
+.contact-details span {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+}
+.contact-details a:hover { color: var(--cyan); }
+.contact-details i { width: 16px; color: var(--cyan); }
+
+@media (max-width: 520px) {
+  .logo { font-size: 18px; }
+}
