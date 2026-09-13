@@ -6,68 +6,55 @@ menuIcon.addEventListener("click", () => {
 });
 
 document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("active");
-  });
+  link.addEventListener("click", () => navLinks.classList.remove("active"));
 });
 
 // Typing animation
 const typingText = document.getElementById("typingText");
-
 const words = [
-  "gameplay systems.",
-  "multiplayer experiences.",
-  "Mixed Reality projects.",
-  "interactive Unity experiences."
+  "Gameplay Systems",
+  "LAN Multiplayer",
+  "Mixed Reality",
+  "Interactive Unity Experiences"
 ];
 
 let wordIndex = 0;
 let charIndex = 0;
-let isDeleting = false;
+let deleting = false;
 
 function typeEffect() {
-  const currentWord = words[wordIndex];
+  const word = words[wordIndex];
+  charIndex += deleting ? -1 : 1;
+  typingText.textContent = word.substring(0, charIndex);
 
-  if (isDeleting) {
-    charIndex--;
-  } else {
-    charIndex++;
-  }
+  let speed = deleting ? 45 : 80;
 
-  typingText.textContent = currentWord.substring(0, charIndex);
-
-  let speed = isDeleting ? 45 : 80;
-
-  if (!isDeleting && charIndex === currentWord.length) {
-    speed = 1400;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
+  if (!deleting && charIndex === word.length) {
+    speed = 1300;
+    deleting = true;
+  } else if (deleting && charIndex === 0) {
+    deleting = false;
     wordIndex = (wordIndex + 1) % words.length;
-    speed = 250;
+    speed = 280;
   }
 
-  window.setTimeout(typeEffect, speed);
+  setTimeout(typeEffect, speed);
 }
 
 typeEffect();
 
-// Reveal on scroll
+// Reveal animation
 const revealElements = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-revealElements.forEach((element) => revealObserver.observe(element));
+revealElements.forEach((el) => observer.observe(el));
 
 // Project filters
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -77,20 +64,17 @@ filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
 
-    filterButtons.forEach((item) => item.classList.remove("active"));
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
     button.classList.add("active");
 
     projectCards.forEach((card) => {
-      const shouldShow =
-        filter === "all" || card.dataset.category === filter;
-
-      card.classList.toggle("hidden", !shouldShow);
+      const visible = filter === "all" || card.dataset.category === filter;
+      card.classList.toggle("hidden", !visible);
     });
   });
 });
 
-// Profile image fallback.
-// Put your image at: assets/profile.jpg
+// Profile photo fallback
 const profilePhoto = document.getElementById("profilePhoto");
 const photoFallback = document.getElementById("photoFallback");
 
