@@ -13,7 +13,7 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 const typingText = document.getElementById("typingText");
 const words = [
   "Gameplay Systems",
-  "LAN Multiplayer",
+  "Multiplayer Games",
   "Mixed Reality",
   "Interactive Unity Experiences"
 ];
